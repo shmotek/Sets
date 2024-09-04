@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sets</title>
+</head>
+<body>
+    <div style="display: grid; place-items: center;">
+        <div id='mainHead' class='head'>Sets</div>
+        <div id='gridContainer' class='grid-container' style="width: 100%; max-width: 620px;">
+            <div id='shuffle' class='shuffle' style="cursor: pointer;">Shuffle</div>
+            <div id="instructionsButton" class="instructionsButton" style="cursor: pointer;">How to Play</div>
+        </div>
+        <div id="instructions" class="instructions"><img src='./images/sets/instructions.svg'></img></div>
+        <div id="cardContainer" class="cardContainer"></div>
+        <div id='score' class='head' style='background-color: gray'>Score: 0</div>
+        <div id='historyContainer' class='cardContainer'></div>
+        
+        <div id="greenCheck" class="feedbackImage"><img src='./images/sets/green_check.svg'></img></div>
+        <div id="yellowCheck" class="feedbackImage"><img src='./images/sets/yellow_check.svg'></img></div>
+        <div id="redX" class="feedbackImage"><img src='./images/sets/red_x.svg'></img></div>
+    </div>
+    <script src="setScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* Apply sans-serif font to the entire page */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: black;
+}
+
+.feedbackImage {
+  background-color: rgb(255, 255, 255);
+  position: fixed; /* Fixed position */
+  top: 33%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  display: none; /* Initially not displayed */
+  padding: 0px;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 50%;
+
+  /* Animation */
+  animation-name: growAndFade;
+  animation-duration: .6s; /* Adjust as needed */
+  animation-fill-mode: forwards; /* Keeps the state at the end of animation */
+}
+
+@keyframes growAndFade {
+  0% {
+
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0); /* Start small and centered */
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.4); /* Grow */
+  }
+ 
+  100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.4); /* Fade out */
+  }
+}
+
+.chosen {
+  outline: 6px solid #d774e4;
+  border-radius: 3px;
+  outline-offset: -1px;
+}
+
+.feedbackImage img {
+  max-width: 100px;
+  min-width: 100px;
+  background-color:white; 
+  margin: 0px; 
+  text-align:center; 
+  border-radius: 50%;
+  border: black;
+}
+
+/* 18 divs, 3 columns, and 6 rows */
+.cardContainer {
+  display: grid;
+  max-width: 620px;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  grid-gap: 10px; /* Spacing between columns and rows */
+  justify-content: center; /* Center the grid horizontally */
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Individual card div styling */
+.cardDiv {
+  height: 100px; /* Adjust the height as needed */
+  width: 100%; /* Each div takes full width of its column */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Individual history card div styling */
+.historyCardDiv {
+  height: 100px; /* Adjust the height as needed */
+  width: 100%; /* Each div takes full width of its column */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* SVG styling */
+.cardDiv svg {
+  height: 100%; /* Fill the height of the parent div */
+  width: 100%; /* Fill the width of the parent div */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* SVG styling */
+.historyCardDiv svg {
+  height: 100%; /* Fill the height of the parent div */
+  width: 100%; /* Fill the width of the parent div */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Center content on screens wider than 620px */
+@media (min-width: 620px) {
+  body {
+    max-width: 100%;
+  }
+
+  /* Limit card divs to 3 columns */
+  .cardDiv {
+    max-width: 620px;
+    width: calc(33.33%); /* Equal width for the three columns with spacing between */
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  background-color: #000000;
+  padding: 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.grid-container > div {
+  padding: 10px;
+}
+
+.head {
+  display: flex;
+  width: 100%;
+  max-width: 620px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(44, 93, 168);
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.historyConstainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(44, 93, 168);
+  font-size: 20px;
+  height: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.shuffle {
+  display: flex;
+  width: 1fr;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgb(117, 144, 183);
+  font-size: 16px;
+  height: 10px;
+  text-align: center;
+  color: white;
+  margin-left: 16px;
+  margin-right: 3px;
+}
+
+.instructionsButton { 
+  display: flex;
+  flex: 1;
+  width: 1fr;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px; 
+  background-color: rgb(117, 144, 183);
+  margin-left: 3px;
+  margin-right: 16px;
+  font-size: 16px;
+  height: 10px;
+  text-align: center;
+  color: white;
+} 
+
+.instructions {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  display: none;
+  border-radius: 5px;
+  margin: 0px;
+  background-color: rgb(0, 0, 0);
+}
+
+.instructions img {
+  width: 100%;
+}
